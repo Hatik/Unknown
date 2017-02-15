@@ -1,0 +1,8 @@
+User.create(name: 'Askhat', username: 'Hatik', email: 'hatik_95@mail.ru', avatar_path: '', description: 'Tatakae', admin: true, password: '123123')
+Category.create(title: 'Standard Category')
+Upload.create(user_id: 1, title: 'Atarashii uploado', image_path: './', category_id: 1, show_flag: true, rating: 0)
+Action.create(title: 'Upvote')
+Action.create(title: 'Downvote')
+Action.create(title: 'Share')
+Action.create(title: 'Report')
+Comment.create(user_id: 1, upload_id: 1, note: 'asdas' )
