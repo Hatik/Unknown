@@ -6,5 +6,6 @@ RSpec.describe Comment, type: :model do
 
   it { is_expected.to respond_to(:user_id) }
   it { is_expected.to respond_to(:upload_id) }
+  it { is_expected.to respond_to(:parent_id) }
   it { is_expected.to respond_to(:note) }
 end

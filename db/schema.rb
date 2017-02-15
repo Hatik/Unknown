@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170215043228) do
+ActiveRecord::Schema.define(version: 20170215035351) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,9 +32,12 @@ ActiveRecord::Schema.define(version: 20170215043228) do
     t.integer  "user_id"
     t.integer  "upload_id"
     t.string   "note",       null: false
+    t.integer  "parent_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "comments", ["parent_id"], name: "index_comments_on_parent_id", using: :btree
 
   create_table "comments_actions", force: :cascade do |t|
     t.integer  "user_id",    null: false
@@ -43,16 +46,6 @@ ActiveRecord::Schema.define(version: 20170215043228) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  create_table "comments_replies", force: :cascade do |t|
-    t.integer  "parent_comment_id", null: false
-    t.integer  "reply_comment_id",  null: false
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-  end
-
-  add_index "comments_replies", ["parent_comment_id"], name: "index_comments_replies_on_parent_comment_id", using: :btree
-  add_index "comments_replies", ["reply_comment_id"], name: "index_comments_replies_on_reply_comment_id", using: :btree
 
   create_table "uploads", force: :cascade do |t|
     t.integer  "user_id",                   null: false
