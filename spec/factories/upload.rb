@@ -7,5 +7,4 @@ FactoryGirl.define do
     show_flag true
     rating 0
   end
-
 end

@@ -5,5 +5,4 @@ RSpec.describe Category, type: :model do
   subject { category }
 
   it { is_expected.to respond_to(:title) }
-
 end

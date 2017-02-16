@@ -9,7 +9,6 @@ class User < ActiveRecord::Base
   has_many :comments_actions
   has_many :uploads_actions
 
-
   validates :username,            presence: true,
                                   uniqueness: true
   validates :email,               presence: true,
@@ -17,5 +16,4 @@ class User < ActiveRecord::Base
                                   uniqueness: true,
                                   format: {with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i}
   validates :encrypted_password,  presence: true
-
 end

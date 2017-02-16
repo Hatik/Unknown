@@ -6,4 +6,6 @@ class Upload < ActiveRecord::Base
 
   validates :title,           presence: true
   validates :image_path,      presence: true
+
+  mount_uploader :image_path, ImageUploader
 end

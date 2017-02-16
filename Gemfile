@@ -5,8 +5,16 @@ gem 'nokogiri'
 gem 'rails', '4.2.7.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
+
+# PG/MySQL Log Formatter
+gem 'rails-flog', '1.3.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'autoprefixer-rails'
+gem 'bootstrap-sass', '>=3.3.6'
+#JavaScript
+# Use jquery as the JavaScript library
+gem 'font-awesome-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -34,6 +42,8 @@ gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+#Uploading
+gem 'carrierwave', '~> 1.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

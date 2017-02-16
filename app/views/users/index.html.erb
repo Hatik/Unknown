@@ -1,2 +1,44 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h1>Listing Users</h1>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>№</th>
+    <th>Name</th>
+    <th>Username</th>
+    <th>Email</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% count = 0 %>
+  <% @users.each do |user| %>
+      <tr>
+        <td>
+          <div>
+            <%= count += 1 %>
+          </div>
+        </td>
+        <td>
+          <div id="user_id_<%= user.id %>">
+            <%= user.name %>
+          </div>
+        </td>
+        <td>
+          <div>
+            <%= user.username %>
+          </div>
+        </td>
+        <td>
+          <div>
+            <%= user.email %>
+          </div>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Other' %>

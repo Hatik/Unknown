@@ -19,5 +19,4 @@ RSpec.describe User, type: :model do
   it { is_expected.to respond_to(:last_sign_in_at) }
   it { is_expected.to respond_to(:current_sign_in_ip) }
   it { is_expected.to respond_to(:last_sign_in_ip) }
-
 end
